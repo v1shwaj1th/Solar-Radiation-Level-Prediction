@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="static/restyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction Result</h1>
+      <p class="result-text">
+        Predicted Radiation Level:
+        <span id="radiation-value">{{ predicted_radiation }}</span> W/m²
+      </p>
+
+      <!-- Category and associated warning message -->
+      <div id="category" class="{{ category }}">
+        <strong>{{ category }}</strong>
+      </div>
+
+      <div id="warning-message" class="warning-message">
+        {{ warning_message | safe }}
+      </div>
+
+      <a href="/" class="back-button">Back to Home</a>
+    </div>
+  </body>
+</html>
